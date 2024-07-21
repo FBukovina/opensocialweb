@@ -1,4 +1,4 @@
-# Chirp
+# the opensocial
 
 ![Chirp logo](/src/images/users/chirp/banner.png)
 
@@ -24,15 +24,15 @@ A social media project meant to mimic the feel of Twitter but be better
 - [ ] Search
 - [ ] Trends
 - [ ] "For you" timeline
+- [ ] the opensocial+ subscription
 
 ## Screenshot
 
 ![Chirp on Desktop](/src/images/screenshots/chirpDesktop.png)
 
 
-## Contributing to Chirp
-Chirps source code (as you can see) is open source. You can freely fork this repo, make changes and then create a pull request.
-If you'd like to, provide your Chirp username and you'll gain a contributors badge next to your name.
+## Contributing to the opensocial
+the opensocial source code(originally forked from Chirp) is open source. You can freely fork this repo, make changes and then create a pull request.
 
 ### Dealing with code
 
@@ -58,17 +58,17 @@ mv chirp /var/www/
 
 #### Database
 
-This project is currently using SQLite. Chrips database is not included in GitHub, as it contains sensntive information that will not be shared publicly. There are however refereces in the PHP files, so you can create an empty replica if you'd like to.
+This project is currently using SQLite. the opensocial database is not included in GitHub, as it contains sensntive information that will not be shared publicly. There are however refereces in the PHP files, so you can create an empty replica if you'd like to.
 
-## Forking Chirp
+## Forking the opensocial
 
-You can freely made copies of Chirp and use Chirps code as a base for your procject. However, in order to be cool, please follow these guidelines:
+You can freely made copies of the opensocial and use the opensocial code as a base for your procject. However, in order to be cool, please follow these guidelines:
 
-• Rebrand your project: Please refrain from uisng any Chirp branding in your project
+• Rebrand your project: Please refrain from uisng any Chirp and the opensocial branding in your project
 
-• Credit us: You should provide credit to the people who have contibuted to this project, or link this repo
+• Credit us: You should provide credit to the people who have contibuted to this project, or link this repo. the opensocial is forked from Chirp and now using some Chirp features, so please credit Chirp and the opensocial. 
 
-Other than that, Chirp uses the MIT license.
+Other than that, the opensocial uses the MIT license.
 
 
 
