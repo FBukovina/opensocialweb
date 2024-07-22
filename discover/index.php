@@ -23,7 +23,7 @@ session_start();
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <title>Discover - Chirp</title>
+    <title>discover - the opensocial</title>
 </head>
 
 <body>
@@ -88,31 +88,31 @@ session_start();
             <div id="exploreTrends">
                 <div id="trends">
                     <div>
-                        <a>gay people</a>
-                        <p class="subText">12 chirps</p>
+                        <a>the opensocial</a>
+                        <p class="subText">0 thees</p>
                     </div>
                     <div>
                         <a>twitter</a>
-                        <p class="subText">47 chirps</p>
+                        <p class="subText">6 thees</p>
                     </div>
                     <div>
-                        <a>iphone 69</a>
-                        <p class="subText">62 chirps</p>
+                        <a>iphone 16</a>
+                        <p class="subText">86 thees</p>
                     </div>
                 </div>
             </div>
             <div class="title">
-                <p class="selcted">Suggested accounts</p>
+                <p class="selcted">u should follow</p>
             </div>
             <div id="whoToFollowExplore">
                 <div id="whotfollow">
                     <div>
                         <div>
                             <img class="userPic"
-                                src="https://pbs.twimg.com/profile_images/1797665112440045568/305XgPDq_400x400.png" alt="">
+                                src="https://pbs.twimg.com/profile_images/1787728519436357632/lq-6wCZD_400x400.jpg" alt="">
                             <div>
-                                <p>Apple <img class="verified" src="/src/images/icons/verified.svg" alt=""></p>
-                                <p class="subText">@apple</p>
+                                <p>Filip(CEO) <img class="verified" src="/src/images/icons/verified.svg" alt=""></p>
+                                <p class="subText">@bukovinafilip</p>
                             </div>
                         </div>
                         <a class="followButton following">Following</a>
@@ -120,10 +120,10 @@ session_start();
                     <div>
                         <div>
                             <img class="userPic"
-                                src="https://pbs.twimg.com/profile_images/1380530524779859970/TfwVAbyX_400x400.jpg" alt="">
+                                src="https://pbs.twimg.com/profile_images/1815321848071995392/_dG6Psvo_400x400.jpg" alt="">
                             <div>
-                                <p>President Biden <img class="verified" src="/src/images/icons/verified.svg" alt=""></p>
-                                <p class="subText">@POTUS</p>
+                                <p>kocicak99 <img class="verified" src="/src/images/icons/verified.svg" alt=""></p>
+                                <p class="subText">@kocicak99</p>
                             </div>
                         </div>
                         <a class="followButton">Follow</a>
@@ -133,8 +133,8 @@ session_start();
                             <img class="userPic"
                                 src="/src/images/users/chirp/user.svg" alt="">
                             <div>
-                                <p>Chirp <img class="verified" src="/src/images/icons/verified.svg" alt=""></p>
-                                <p class="subText">@chirp</p>
+                                <p>the opensocial <img class="verified" src="/src/images/icons/verified.svg" alt=""></p>
+                                <p class="subText">@theopensocial</p>
                             </div>
                         </div>
                     </div>
@@ -145,8 +145,8 @@ session_start();
     </main>
     <aside id="sideBar">
         <div>
-            <p class="subText">Inspired by Twitter/X. No code has been sourced from Twitter/X. Twemoji by Twitter Inc/X Corp is licensed under CC-BY 4.0.
-<br><br>You're running: Chirp Beta 0.1b</p>
+            <p class="subText">Developed by Filip Bukovina. Some code has been forked from Chirp.
+<br><br>the opensocial 0.1</p>
         </div>
     </aside>
     <footer>
