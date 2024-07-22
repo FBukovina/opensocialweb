@@ -30,7 +30,7 @@ session_start();
     <header>
         <div id="desktopMenu">
             <nav>
-         <img src="/src/images/icons/chirp.svg" alt="Chirp" onclick="playChirpSound()">
+         <img src="/src/images/icons/chirp.svg" alt="the opensocial">
                 <a href="/"><img src="/src/images/icons/house.svg" alt=""> Home</a>
                 <a href="/discover" class="activeDesktop"><img src="/src/images/icons/search.svg" alt=""> Discover</a>
                 <a href="/notifications"><img src="/src/images/icons/bell.svg" alt=""> Notifications</a>
@@ -38,14 +38,14 @@ session_start();
                 <a
                 href="<?php echo isset($_SESSION['username']) ? '/user?id=' . htmlspecialchars($_SESSION['username']) : '/signin'; ?>"><img
                     src="/src/images/icons/person.svg" alt=""> Profile</a>
-                <a href="/compose" class="newchirp">Chirp</a>
+                <a href="/compose" class="newtheet">theet</a>
             </nav>
             <div id="menuSettings">
                 <a href="settings">⚙️ Settings</a>
                 <?php if (isset($_SESSION['username'])): ?>
-                <a href="/signout.php">🚪 Sign out</a>
+                <a href="/signout.php">🚪 sign out</a>
                 <?php else: ?>
-                <a href="/signin/">🚪 Sign in</a>
+                <a href="/signin/">🚪 sign in</a>
                 <?php endif; ?>
             </div>
             <button id="settingsButtonWrapper" type="button" onclick="showMenuSettings()">
@@ -69,21 +69,21 @@ session_start();
     <main>
         <div id="feed">
             <div id="iconChirp">
-         <img src="/src/images/icons/search.svg" alt="Chirp">
+         <img src="/src/images/icons/search.svg" alt="the opensocial">
             </div>
             <div class="title">
                 <p class="selcted">Search</p>
             </div>
             <form id="searchMenu">
                 <div id="exploreer">
-                    <textarea maxlength="240" placeholder="What are you looking for?"></textarea>
+                    <textarea maxlength="240" placeholder="do u want to find someone?"></textarea>
                 </div>
-                <div id="exploreChirp">
-                    <button type="submit" class="postChirp">Search</button>
+                <div id="exploreTheopensocial">
+                    <button type="submit" class="postTheet">search</button>
                 </div>
             </form>
             <div class="title">
-                <p class="selcted">Trends</p>
+                <p class="selcted">most theets on</p>
             </div>
             <div id="exploreTrends">
                 <div id="trends">
@@ -146,7 +146,7 @@ session_start();
     <aside id="sideBar">
         <div>
             <p class="subText">Developed by Filip Bukovina. Some code has been forked from Chirp.
-<br><br>the opensocial 0.1</p>
+<br><br>the opensocial v0.1</p>
         </div>
     </aside>
     <footer>
