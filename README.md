@@ -2,7 +2,7 @@
 
 
 
-replacement for X you've been waiting for
+replacement for X you've been waiting for.
 
 ## Status
 
