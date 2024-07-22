@@ -69,10 +69,10 @@ session_start();
         <div id="cancelModal" class="modal">
             <div class="modal-content">
                 <h2>save it for future?</h2>
-                <p>it seems like you've written something without theeting it.<br>do u want to hold on to what
+                <p>it seems like you've written something without posting it.<br>do u want to hold on to what
                     you wrote and save it as a draft on your device?</p>
-                <button id="saveDraftButton" class="modal-button">save the theet</button>
-                <button id="discardDraftButton" class="modal-button">throw out the theet</button>
+                <button id="saveDraftButton" class="modal-button">save the post</button>
+                <button id="discardDraftButton" class="modal-button">throw out the post</button>
             </div>
         </div>
         <div id="feedCompose">
@@ -80,7 +80,7 @@ session_start();
                 <img src="/src/images/icons/write.svg" alt="Write">
             </div>
             <div class="title">
-                <p class="selected">new theeet</p>
+                <p class="selected">new post</p>
             </div>
             <form method="POST" action="/compose/submit.php">
                 <div id="composer">
@@ -88,14 +88,14 @@ session_start();
                 </div>
                 <div id="exploreChirp" class="searchButtons">
                     <button type="button" class="cancelTheet" onclick="slideDown()">discard</button>
-                    <button type="submit" class="postTheet" onclick="slideDownPost()">theet</button>
+                    <button type="submit" class="postTheet" onclick="slideDownPost()">post</button>
                 </div>
             </form>
             <div class="title">
                 <p class="selected">drafts</p>
             </div>
             <div class="drafts-container">
-                <p class="subText">u don't have untheeted theets.</p>
+                <p class="subText">u don't have any posts in drafts.</p>
             </div>
         </div>
     </main>

@@ -31,17 +31,17 @@ session_start();
         <div id="desktopMenu">
             <nav>
          <img src="/src/images/icons/chirp.svg" alt="the opensocial">
-                <a href="/"><img src="/src/images/icons/house.svg" alt=""> Home</a>
-                <a href="/discover" class="activeDesktop"><img src="/src/images/icons/search.svg" alt=""> Discover</a>
-                <a href="/notifications"><img src="/src/images/icons/bell.svg" alt=""> Notifications</a>
-                <a href="/messages"><img src="/src/images/icons/envelope.svg" alt=""> Direct Messages</a>
+                <a href="/"><img src="/src/images/icons/house.svg" alt=""> home</a>
+                <a href="/discover" class="activeDesktop"><img src="/src/images/icons/search.svg" alt=""> discover</a>
+                <a href="/notifications"><img src="/src/images/icons/bell.svg" alt=""> notifications</a>
+                <a href="/messages"><img src="/src/images/icons/envelope.svg" alt=""> the messages</a>
                 <a
                 href="<?php echo isset($_SESSION['username']) ? '/user?id=' . htmlspecialchars($_SESSION['username']) : '/signin'; ?>"><img
-                    src="/src/images/icons/person.svg" alt=""> Profile</a>
-                <a href="/compose" class="newtheet">theet</a>
+                    src="/src/images/icons/person.svg" alt="profile"> profile</a>
+                <a href="/compose" class="newpost">post</a>
             </nav>
             <div id="menuSettings">
-                <a href="settings">⚙️ Settings</a>
+                <a href="settings">⚙️ settings</a>
                 <?php if (isset($_SESSION['username'])): ?>
                 <a href="/signout.php">🚪 sign out</a>
                 <?php else: ?>
@@ -53,7 +53,7 @@ session_start();
                     src="<?php echo isset($_SESSION['profile_pic']) ? htmlspecialchars($_SESSION['profile_pic']) : '/src/images/users/guest/user.svg'; ?>"
                     alt="<?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'guest'; ?>">
                 <div>
-                    <p class="usernameMenu"><?php echo isset($_SESSION['name']) ? htmlspecialchars($_SESSION['name']) : 'Guest'; ?>
+                    <p class="usernameMenu"><?php echo isset($_SESSION['name']) ? htmlspecialchars($_SESSION['name']) : 'guest'; ?>
                         <?php if (isset($_SESSION['is_verified']) && $_SESSION['is_verified']): ?>
                             <img class="emoji" src="/src/images/icons/verified.svg" alt="Verified">
                         <?php endif; ?>
@@ -79,25 +79,25 @@ session_start();
                     <textarea maxlength="240" placeholder="do u want to find someone?"></textarea>
                 </div>
                 <div id="exploreTheopensocial">
-                    <button type="submit" class="postTheet">search</button>
+                    <button type="submit" class="postPost>search</button>
                 </div>
             </form>
             <div class="title">
-                <p class="selcted">most theets on</p>
+                <p class="selcted">most posts on</p>
             </div>
             <div id="exploreTrends">
                 <div id="trends">
                     <div>
                         <a>the opensocial</a>
-                        <p class="subText">0 thees</p>
+                        <p class="subText">0 posts</p>
                     </div>
                     <div>
                         <a>twitter</a>
-                        <p class="subText">6 thees</p>
+                        <p class="subText">6 posts</p>
                     </div>
                     <div>
                         <a>iphone 16</a>
-                        <p class="subText">86 thees</p>
+                        <p class="subText">86 posts</p>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@ session_start();
                                 <p class="subText">@bukovinafilip</p>
                             </div>
                         </div>
-                        <a class="followButton following">Following</a>
+                        <a class="followButton following">following</a>
                     </div>
                     <div>
                         <div>
@@ -126,7 +126,7 @@ session_start();
                                 <p class="subText">@kocicak99</p>
                             </div>
                         </div>
-                        <a class="followButton">Follow</a>
+                        <a class="followButton">follow</a>
                     </div>
                     <div>
                         <div>
@@ -151,10 +151,10 @@ session_start();
     </aside>
     <footer>
         <div>
-            <a href="/"><img src="/src/images/icons/house.svg" alt="Home"></a>
-            <a href="explore" class="active"><img src="/src/images/icons/search.svg" alt="Discover"></a>
-            <a href="notifications"><img src="/src/images/icons/bell.svg" alt="Notifications"></a>
-            <a href="messages"><img src="/src/images/icons/envelope.svg" alt="Direct Messages"></a>
+            <a href="/"><img src="/src/images/icons/house.svg" alt="home"></a>
+            <a href="explore" class="active"><img src="/src/images/icons/search.svg" alt="discover"></a>
+            <a href="notifications"><img src="/src/images/icons/bell.svg" alt="notifications"></a>
+            <a href="messages"><img src="/src/images/icons/envelope.svg" alt="the messages"></a>
             <a
                 href="<?php echo isset($_SESSION['username']) ? '/user?id=' . htmlspecialchars($_SESSION['username']) : '/signin'; ?>"><img
                     src="/src/images/icons/person.svg" alt="Profile"></a>

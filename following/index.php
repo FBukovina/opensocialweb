@@ -23,7 +23,7 @@ session_start();
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <title>Following - Chirp</title>
+    <title>following - the opensocial</title>
 </head>
 
 <body>
@@ -31,21 +31,21 @@ session_start();
         <div id="desktopMenu">
             <nav>
          <img src="/src/images/icons/chirp.svg" alt="Chirp" onclick="playChirpSound()">
-                <a href="/" class="activeDesktop"><img src="/src/images/icons/house.svg" alt=""> Home</a>
-                <a href="/discover"><img src="/src/images/icons/search.svg" alt=""> Discover</a>
-                <a href="/notifications"><img src="/src/images/icons/bell.svg" alt=""> Notifications</a>
-                <a href="/messages"><img src="/src/images/icons/envelope.svg" alt=""> Direct Messages</a>
+                <a href="/" class="activeDesktop"><img src="/src/images/icons/house.svg" alt=""> home</a>
+                <a href="/discover"><img src="/src/images/icons/search.svg" alt=""> discover</a>
+                <a href="/notifications"><img src="/src/images/icons/bell.svg" alt=""> notifications</a>
+                <a href="/messages"><img src="/src/images/icons/envelope.svg" alt=""> the messages</a>
                 <a
                 href="<?php echo isset($_SESSION['username']) ? '/user?id=' . htmlspecialchars($_SESSION['username']) : '/signin'; ?>"><img
                     src="/src/images/icons/person.svg" alt=""> Profile</a>
-                <a href="/compose" class="newchirp">Chirp</a>
+                <a href="/compose" class="newchirp">post</a>
             </nav>
             <div id="menuSettings">
-                <a href="settings">⚙️ Settings</a>
+                <a href="settings">⚙️ settings</a>
                 <?php if (isset($_SESSION['username'])): ?>
-                <a href="/signout.php">🚪 Sign out</a>
+                <a href="/signout.php">🚪 sign out</a>
                 <?php else: ?>
-                <a href="/signin/">🚪 Sign in</a>
+                <a href="/signin/">🚪 sign in</a>
                 <?php endif; ?>
             </div>
             <button id="settingsButtonWrapper" type="button" onclick="showMenuSettings()">
@@ -73,8 +73,8 @@ session_start();
             </div>
             <div id="timelineSelect">
                 <div>
-                    <a id="forYou" href="/">For you</a>
-                    <a id="following" class="selected" href="following">Following</a>
+                    <a id="forYou" href="/">for u</a>
+                    <a id="following" class="selected" href="following">following</a>
                 </div>
             </div>
             <div id="highTraffic">

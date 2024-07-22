@@ -13,7 +13,7 @@ try {
 
     // Check if the user is logged in
     if (!isset($_SESSION['username'])) {
-        $_SESSION['error_message'] = "You need to be logged in to post.";
+        $_SESSION['error_message'] = "maybe you need to be logged in to post?";
         header('Location: /signin/');
         exit;
     }
@@ -29,7 +29,7 @@ try {
     $user = $userStmt->fetch(PDO::FETCH_ASSOC);
 
     if (!$user) {
-        $_SESSION['error_message'] = "User not found.";
+        $_SESSION['error_message'] = "this people doesn't exist.";
         header('Location: /signin/');
         exit;
     }
@@ -37,7 +37,7 @@ try {
     $userId = $user['id'];
 
     // Define rate limiting parameters
-    define('MAX_CHARS', 240); // Maximum characters allowed for a theet
+    define('MAX_CHARS', 240); // Maximum characters allowed for a post
 
     // Check if the last submission time and attempt count are stored in the session
     $lastSubmissionTime = isset($_SESSION['last_submission_time']) ? $_SESSION['last_submission_time'] : 0;
@@ -59,7 +59,7 @@ try {
     // Reset attempt count on successful submission
     $_SESSION['attempt_count'] = 0;
 
-    // Check if theet text is empty or exceeds maximum allowed characters
+    // Check if post text is empty or exceeds maximum allowed characters
     if (!isset($_POST['chirpComposeText'])) {
         $_SESSION['error_message'] = "Invalid form submission.";
         header('Location: /');
@@ -68,13 +68,13 @@ try {
 
     $chirpText = trim($_POST['chirpComposeText']);
     if (empty($chirpText)) {
-        $_SESSION['error_message'] = "Chirp cannot be empty.";
+        $_SESSION['error_message'] = "post cannot be empty.";
         header('Location: /');
         exit;
     }
 
     if (strlen($chirpText) > MAX_CHARS) {
-        $_SESSION['error_message'] = "Chirp exceeds maximum character limit of " . MAX_CHARS . " characters.";
+        $_SESSION['error_message'] = "post exceeds maximum character limit of " . MAX_CHARS . " characters.";
         header('Location: /');
         exit;
     }
@@ -95,7 +95,7 @@ try {
 
     // Execute the SQL statement
     if ($stmt->execute()) {
-        // Store the ID of the newly inserted chirp
+        // Store the ID of the newly inserted post
         $chirpId = $db->lastInsertId();
 
         // Update last submission time in session
@@ -105,7 +105,7 @@ try {
         header('Location: /chirp/index.php?id=' . $chirpId);
     } else {
         // Execution failed
-        $_SESSION['error_message'] = 'Failed to post chirp.';
+        $_SESSION['error_message'] = 'failed to create a post.';
         header('Location: /');
     }
     exit();
