@@ -62,7 +62,7 @@ This project is currently using SQLite. the opensocial database is not included 
 
 You can freely made copies of the opensocial and use the opensocial code as a base for your procject. However, in order to be cool, please follow these guidelines:
 
-• Rebrand your project: Please refrain from uisng any Chirp and the opensocial branding in your project
+• Rebrand your project: Please refrain from using any Chirp and the opensocial branding in your project
 
 • Credit us: You should provide credit to the people who have contibuted to this project, or link this repo. the opensocial is forked from Chirp and now using some Chirp features, so please credit Chirp and the opensocial. 
 
