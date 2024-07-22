@@ -1,20 +1,21 @@
 # the opensocial
 
-![Chirp logo](/src/images/users/chirp/banner.png)
 
-A social media project meant to mimic the feel of Twitter but be better
+
+replacement for X you've been waiting for
 
 ## Status
 
 ### What's working
-- [x] Account creation
-- [x] Posting
-- [x] Replying
-- [x] Liking
-- [x] Account editing
+- [x] account creation
+- [x] posting(theeting)
+- [x] replying
+- [x] liking
+- [x] account editing
+- [x] drafts
 
 ### What isn't working
-- [ ] Reposts
+- [ ] Reposts(retheets)
 - [ ] Viewing likes and reposts on accounts
 
 ### What's planned
@@ -24,11 +25,8 @@ A social media project meant to mimic the feel of Twitter but be better
 - [ ] Search
 - [ ] Trends
 - [ ] "For you" timeline
-- [ ] the opensocial+ subscription
-
-## Screenshot
-
-![Chirp on Desktop](/src/images/screenshots/chirpDesktop.png)
+- [ ] the opensocial+ subscription - no ads, + badge, colour customisation
+- [ ] ADS platform
 
 
 ## Contributing to the opensocial
