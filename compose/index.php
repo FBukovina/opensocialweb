@@ -30,7 +30,7 @@ session_start();
     <header>
         <div id="desktopMenu">
             <nav>
-                <img src="/src/images/icons/chirp.svg" alt="Chirp" onclick="playChirpSound()">
+                <img src="/src/images/icons/chirp.svg" alt="the opensocial" onclick="playChirpSound()">
                 <a href="/"><img src="/src/images/icons/house.svg" alt=""> Home</a>
                 <a href="explore"><img src="/src/images/icons/search.svg" alt=""> Discover</a>
                 <a href="notifications"><img src="/src/images/icons/bell.svg" alt=""> Notifications</a>
@@ -42,9 +42,9 @@ session_start();
             <div id="menuSettings">
                 <a href="settings">⚙️ Settings</a>
                 <?php if (isset($_SESSION['username'])): ?>
-                <a href="/signout.php">🚪 Sign out</a>
+                <a href="/signout.php">🚪 sign out</a>
                 <?php else: ?>
-                <a href="/signin/">🚪 Sign in</a>
+                <a href="/signin/">🚪 sign in</a>
                 <?php endif; ?>
             </div>
             <button id="settingsButtonWrapper" type="button" onclick="showMenuSettings()">
@@ -68,11 +68,11 @@ session_start();
     <main>
         <div id="cancelModal" class="modal">
             <div class="modal-content">
-                <h2>Save as draft?</h2>
-                <p>It seems like you've written something without chirping it.<br>Do you want Chirpie to hold on to what
-                    you wrote and store it as a draft on your device?</p>
-                <button id="saveDraftButton" class="modal-button">Save as draft</button>
-                <button id="discardDraftButton" class="modal-button">No</button>
+                <h2>save it for future?</h2>
+                <p>it seems like you've written something without theeting it.<br>do u want to hold on to what
+                    you wrote and save it as a draft on your device?</p>
+                <button id="saveDraftButton" class="modal-button">save the theet</button>
+                <button id="discardDraftButton" class="modal-button">throw out the theet</button>
             </div>
         </div>
         <div id="feedCompose">
@@ -80,22 +80,22 @@ session_start();
                 <img src="/src/images/icons/write.svg" alt="Write">
             </div>
             <div class="title">
-                <p class="selected">Compose a Chirp</p>
+                <p class="selected">new theeet</p>
             </div>
             <form method="POST" action="/compose/submit.php">
                 <div id="composer">
-                    <textarea name="chirpComposeText" maxlength="240" placeholder="What's on your mind?"></textarea>
+                    <textarea name="chirpComposeText" maxlength="240" placeholder="what's happening?"></textarea>
                 </div>
                 <div id="exploreChirp" class="searchButtons">
-                    <button type="button" class="cancelChirp" onclick="slideDown()">Cancel</button>
-                    <button type="submit" class="postChirp" onclick="slideDownPost()">Chirp</button>
+                    <button type="button" class="cancelTheet" onclick="slideDown()">discard</button>
+                    <button type="submit" class="postTheet" onclick="slideDownPost()">theet</button>
                 </div>
             </form>
             <div class="title">
-                <p class="selected">Drafts</p>
+                <p class="selected">drafts</p>
             </div>
             <div class="drafts-container">
-                <p class="subText">You have no drafts.</p>
+                <p class="subText">u don't have untheeted theets.</p>
             </div>
         </div>
     </main>

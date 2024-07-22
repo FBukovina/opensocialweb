@@ -37,7 +37,7 @@ try {
     $userId = $user['id'];
 
     // Define rate limiting parameters
-    define('MAX_CHARS', 240); // Maximum characters allowed for a chirp
+    define('MAX_CHARS', 240); // Maximum characters allowed for a theet
 
     // Check if the last submission time and attempt count are stored in the session
     $lastSubmissionTime = isset($_SESSION['last_submission_time']) ? $_SESSION['last_submission_time'] : 0;
@@ -59,7 +59,7 @@ try {
     // Reset attempt count on successful submission
     $_SESSION['attempt_count'] = 0;
 
-    // Check if chirp text is empty or exceeds maximum allowed characters
+    // Check if theet text is empty or exceeds maximum allowed characters
     if (!isset($_POST['chirpComposeText'])) {
         $_SESSION['error_message'] = "Invalid form submission.";
         header('Location: /');
@@ -83,7 +83,7 @@ try {
     $chirpText = htmlspecialchars($chirpText, ENT_QUOTES, 'UTF-8');
     $chirpText = str_replace("&#039;", "'", $chirpText); // Revert single quote encoding
 
-    // Prepare SQL statement for inserting chirp into database
+    // Prepare SQL statement for inserting theet into database
     $sql = "INSERT INTO chirps (chirp, user, timestamp) VALUES (:chirp, :user, :timestamp)";
     $stmt = $db->prepare($sql);
 
@@ -101,7 +101,7 @@ try {
         // Update last submission time in session
         $_SESSION['last_submission_time'] = $currentTime;
 
-        // Redirect to the chirp details page with the chirp ID
+        // Redirect to the theet details page with the theet ID
         header('Location: /chirp/index.php?id=' . $chirpId);
     } else {
         // Execution failed
