@@ -78,12 +78,12 @@ session_start();
                 </div>
             </div>
             <div id="highTraffic">
-                <p>We're experiencing very high traffic right now.<br>Chirpie is trying his best, but if Chirp slows
-                    down, don't panic!</p>
+                <p>CrowdStrike is going to slow the opensocial.<br>filip is trying to fix it, but if the opensocial break
+                    down, stay chill!</p>
             </div>
             <div id="chirps">
             </div>
-            <p class="noMoreChirps">If you want to use the Following tab you need to follow people first! 😝</p>
+            <p class="noMoreChirps">filip did his best, but he hasn't finished this section yet 😭</p>
         </div>
     </main>
     <aside id="sideBar">
@@ -91,13 +91,13 @@ session_start();
     </aside>
     <footer>
         <div class="mobileCompose">
-            <a class="chirpMoile" href="compose">Chirp</a>
+            <a class="chirpMoile" href="compose">post</a>
         </div>
         <div>
-            <a href="/" class="active"><img src="/src/images/icons/house.svg" alt="Home"></a>
-            <a href="/discover"><img src="/src/images/icons/search.svg" alt="Discover"></a>
-            <a href="/notifications"><img src="/src/images/icons/bell.svg" alt="Notifications"></a>
-            <a href="/messages"><img src="/src/images/icons/envelope.svg" alt="Direct Messages"></a>
+            <a href="/" class="active"><img src="/src/images/icons/house.svg" alt="home"></a>
+            <a href="/discover"><img src="/src/images/icons/search.svg" alt="discover"></a>
+            <a href="/notifications"><img src="/src/images/icons/bell.svg" alt="notifications"></a>
+            <a href="/messages"><img src="/src/images/icons/envelope.svg" alt="the messages"></a>
             <a
                 href="<?php echo isset($_SESSION['username']) ? '/user?id=' . htmlspecialchars($_SESSION['username']) : '/signin'; ?>"><img
                     src="/src/images/icons/person.svg" alt="Profile"></a>
