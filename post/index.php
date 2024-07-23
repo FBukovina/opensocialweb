@@ -88,7 +88,7 @@ try {
 <html lang="en">
 
 <head>
-    <title><?php echo isset($title) ? $title : 'Chirp'; ?></title>
+    <title><?php echo isset($title) ? $title : 'the opensocial'; ?></title>
     <meta charset="UTF-8">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -114,21 +114,21 @@ try {
             <div id="desktopMenu">
                 <nav>
                     <img src="/src/images/icons/chirp.svg" alt="Chirp" onclick="playChirpSound()">
-                    <a href="/"><img src="/src/images/icons/house.svg" alt=""> Home</a>
-                    <a href="/discover"><img src="/src/images/icons/search.svg" alt=""> Discover</a>
-                    <a href="/notifications"><img src="/src/images/icons/bell.svg" alt=""> Notifications</a>
-                    <a href="/messages"><img src="/src/images/icons/envelope.svg" alt=""> Direct Messages</a>
+                    <a href="/"><img src="/src/images/icons/house.svg" alt=""> home</a>
+                    <a href="/discover"><img src="/src/images/icons/search.svg" alt=""> discover</a>
+                    <a href="/notifications"><img src="/src/images/icons/bell.svg" alt=""> notifications</a>
+                    <a href="/messages"><img src="/src/images/icons/envelope.svg" alt=""> the messages</a>
                     <a
                         href="<?php echo isset($_SESSION['username']) ? '/user?id=' . htmlspecialchars($_SESSION['username']) : '/signin'; ?>"><img
                             src="/src/images/icons/person.svg" alt=""> Profile</a>
-                    <a href="/compose" class="newchirp">Chirp</a>
+                    <a href="/compose" class="newchirp">post</a>
                 </nav>
                 <div id="menuSettings">
                     <a href="settings">⚙️ Settings</a>
                     <?php if (isset($_SESSION['username'])): ?>
-                    <a href="/signout.php">🚪 Sign out</a>
+                    <a href="/signout.php">🚪 sign out</a>
                     <?php else: ?>
-                    <a href="/signin/">🚪 Sign in</a>
+                    <a href="/signin/">🚪 sign in</a>
                     <?php endif; ?>
                 </div>
                 <button id="settingsButtonWrapper" type="button" onclick="showMenuSettings()">
@@ -163,8 +163,8 @@ try {
                 <?php if (!$post || empty($postId)) : ?>
                 <!-- If post is not found or no ID provided, show this -->
                 <div id="notFound">
-                    <p>Chirp not found</p>
-                    <p class="subText">That chirp does not exist.</p>
+                    <p>post "dissappeared"</p>
+                    <p class="subText">maybe that post never been posted.</p>
                 </div>
                 <?php else : ?>
                 <!-- Display the fetched post -->
@@ -257,13 +257,13 @@ try {
         </aside>
         <footer>
             <div class="mobileCompose">
-                <a class="chirpMoile" href="compose">Chirp</a>
+                <a class="chirpMoile" href="compose">post</a>
             </div>
             <div>
-                <a href="/"><img src="/src/images/icons/house.svg" alt="Home"></a>
-                <a href="/discover"><img src="/src/images/icons/search.svg" alt="Discover"></a>
-                <a href="/notifications"><img src="/src/images/icons/bell.svg" alt="Notifications"></a>
-                <a href="/messages"><img src="/src/images/icons/envelope.svg" alt="Direct Messages"></a>
+                <a href="/"><img src="/src/images/icons/house.svg" alt="home"></a>
+                <a href="/discover"><img src="/src/images/icons/search.svg" alt="discover"></a>
+                <a href="/notifications"><img src="/src/images/icons/bell.svg" alt="notifications"></a>
+                <a href="/messages"><img src="/src/images/icons/envelope.svg" alt="the messages"></a>
                 <a
                     href="<?php echo isset($_SESSION['username']) ? '/user?id=' . htmlspecialchars($_SESSION['username']) : '/signin'; ?>"><img
                         src="/src/images/icons/person.svg" alt="Profile"></a>
@@ -271,13 +271,13 @@ try {
         </footer>
         <div id="likeModal" class="interaction-modal" style="display: none;">
             <ul class="interaction-modal-content">
-                <li><button onclick="showLikes()"><img src="/src/images/icons/stats.svg" class="emoji">Show
+                <li><button onclick="showLikes()"><img src="/src/images/icons/stats.svg" class="emoji">show
                         likes</button></li>
                 <li>
                     <button type="button" class="like"
                         onclick="updateChirpInteraction(<?php echo $postId; ?>, 'like', this)">
                         <img alt="Like" src="/src/images/icons/<?php echo $liked ? 'liked' : 'like'; ?>.svg">
-                        <span class="like-button-text"><?php echo $liked ? 'Undo like' : 'Like'; ?></span>
+                        <span class="like-button-text"><?php echo $liked ? 'unlike' : 'like'; ?></span>
                     </button>
                 </li>
             </ul>
@@ -285,16 +285,16 @@ try {
 
         <div id="rechirpModal" class="interaction-modal" style="display: none;">
             <ul class="interaction-modal-content">
-                <li><button onclick="showRechirps()"><img src="/src/images/icons/stats.svg" class="emoji">Show
-                        rechirps</button></li>
-                <li><button onclick="quoteChirp()"><img src="/src/images/icons/write.svg" class="emoji">Quote</button>
+                <li><button onclick="showRechirps()"><img src="/src/images/icons/stats.svg" class="emoji">show
+                        reposts</button></li>
+                <li><button onclick="quoteChirp()"><img src="/src/images/icons/write.svg" class="emoji">quote</button>
                 </li>
                 <li>
                     <button type="button" class="rechirp"
-                        onclick="updateChirpInteraction(<?php echo $postId; ?>, 'rechirp', this)">
+                        onclick="updateChirpInteraction(<?php echo $postId; ?>, 'repost', this)">
                         <img alt="Rechirp"
-                            src="/src/images/icons/<?php echo $rechirped ? 'rechirped' : 'rechirp'; ?>.svg">
-                        <span class="rechirp-button-text"><?php echo $rechirped ? 'Undo rechirp' : 'Rechirp'; ?></span>
+                            src="/src/images/icons/<?php echo $rechirped ? 'reposted' : 'repost'; ?>.svg">
+                        <span class="rechirp-button-text"><?php echo $rechirped ? 'Undo repost' : 'repost'; ?></span>
                     </button>
                 </li>
             </ul>
@@ -341,11 +341,11 @@ try {
         }
 
         function showLoadingSpinner() {
-            document.getElementById('noMoreChirps').style.display = 'block';
+            document.getElementById('noMorePosts').style.display = 'block';
         }
 
         function hideLoadingSpinner() {
-            document.getElementById('noMoreChirps').style.display = 'none';
+            document.getElementById('noMorePosts').style.display = 'none';
         }
 
         function loadChirps() {
@@ -403,7 +403,7 @@ try {
                         twemoji.parse(chirpsContainer);
                     })
                     .catch(error => {
-                        console.error('Error fetching chirps:', error);
+                        console.error('error loading posts:', error);
                     })
                     .finally(() => {
                         loadingChirps = false; // Reset loading flag
@@ -460,9 +460,9 @@ try {
 
         document.addEventListener("DOMContentLoaded", function() {
             const likeModal = document.getElementById("likeModal");
-            const rechirpModal = document.getElementById("rechirpModal");
+            const repostModal = document.getElementById("repostModal");
             const likeButton = document.getElementById("likeButton");
-            const rechirpButton = document.getElementById("rechirpButton");
+            const repostButton = document.getElementById("repostButton");
 
             function openModal(modalId) {
                 document.getElementById(modalId).style.display = "block";

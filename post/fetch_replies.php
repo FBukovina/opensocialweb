@@ -20,7 +20,7 @@ try {
     $post = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if (!$post) {
-        throw new Exception('Post not found.');
+        throw new Exception('post not found.');
     }
 
     $repliesArray = json_decode($post['replies'], true);
