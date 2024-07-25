@@ -23,7 +23,7 @@ session_start();
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <title>Direct Messages - Chirp</title>
+    <title>the messages - the opensocial</title>
 </head>
 
 <body>
@@ -31,10 +31,10 @@ session_start();
         <div id="desktopMenu">
             <nav>
          <img src="/src/images/icons/chirp.svg" alt="Chirp" onclick="playChirpSound()">
-                <a href="/"><img src="/src/images/icons/house.svg" alt=""> Home</a>
-                <a href="/discover"><img src="/src/images/icons/search.svg" alt=""> Discover</a>
-                <a href="/notifications"><img src="/src/images/icons/bell.svg" alt=""> Notifications</a>
-                <a href="/messages" class="activeDesktop"><img src="/src/images/icons/envelope.svg" alt=""> Direct Messages</a>
+                <a href="/"><img src="/src/images/icons/house.svg" alt=""> home</a>
+                <a href="/discover"><img src="/src/images/icons/search.svg" alt=""> discover</a>
+                <a href="/notifications"><img src="/src/images/icons/bell.svg" alt=""> notifications</a>
+                <a href="/messages" class="activeDesktop"><img src="/src/images/icons/envelope.svg" alt=""> the messages</a>
                 <a
                 href="<?php echo isset($_SESSION['username']) ? '/user?id=' . htmlspecialchars($_SESSION['username']) : '/signin'; ?>"><img
                     src="/src/images/icons/person.svg" alt=""> Profile</a>
@@ -43,9 +43,9 @@ session_start();
             <div id="menuSettings">
                 <a href="settings">⚙️ Settings</a>
                 <?php if (isset($_SESSION['username'])): ?>
-                <a href="/signout.php">🚪 Sign out</a>
+                <a href="/signout.php">🚪 sign out</a>
                 <?php else: ?>
-                <a href="/signin/">🚪 Sign in</a>
+                <a href="/signin/">🚪 sign in</a>
                 <?php endif; ?>
             </div>
             <button id="settingsButtonWrapper" type="button" onclick="showMenuSettings()">
@@ -72,7 +72,7 @@ session_start();
          <img src="/src/images/icons/chirp.svg" alt="Chirp">
             </div>
             <div class="title">
-                <p class="selcted">Direct Messages</p>
+                <p class="selcted">the messages</p>
             </div>
             <form id="searchMenu">
                 <div id="exploreer">
@@ -139,7 +139,7 @@ session_start();
     </aside>
     <footer>
         <div class="mobileCompose">
-            <a class="chirpMoile" href="compose">New message</a>
+            <a class="chirpMoile" href="compose">post</a>
         </div>
         <div>
             <a href="/"><img src="/src/images/icons/house.svg" alt="Home"></a>

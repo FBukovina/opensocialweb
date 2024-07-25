@@ -36,7 +36,7 @@ try {
     $userId = $user['id'];
 
     // Define rate limiting parameters
-    define('MAX_CHARS', 240); // Maximum characters allowed for a chirp
+    define('MAX_CHARS', 240); // Maximum characters allowed for a post
 
     // Check if the last submission time and attempt count are stored in the session
     $lastSubmissionTime = isset($_SESSION['last_submission_time']) ? $_SESSION['last_submission_time'] : 0;
@@ -50,7 +50,7 @@ try {
     if ($currentTime - $lastSubmissionTime < $cooldownSeconds) {
         // Rate limit exceeded, increment attempt count
         $_SESSION['attempt_count'] = ++$attemptCount;
-        $_SESSION['error_message'] = "You are posting too quickly. Slow down!";
+        $_SESSION['error_message'] = "go for a coffee and take a break.";
         header('Location: /');
         exit;
     }
@@ -61,13 +61,13 @@ try {
     // Check if chirp text is empty or exceeds maximum allowed characters
     $chirpText = trim($_POST['chirpComposeText']);
     if (empty($chirpText)) {
-        $_SESSION['error_message'] = "Chirp cannot be empty.";
+        $_SESSION['error_message'] = "i don't want to be empty";
         header('Location: /');
         exit;
     }
 
     if (strlen($chirpText) > MAX_CHARS) {
-        $_SESSION['error_message'] = "Chirp exceeds maximum character limit of " . MAX_CHARS . " characters.";
+        $_SESSION['error_message'] = "i can't handle soooo characters " . MAX_CHARS . " characters.";
         header('Location: /');
         exit;
     }
