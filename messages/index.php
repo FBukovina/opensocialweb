@@ -38,7 +38,7 @@ session_start();
                 <a
                 href="<?php echo isset($_SESSION['username']) ? '/user?id=' . htmlspecialchars($_SESSION['username']) : '/signin'; ?>"><img
                     src="/src/images/icons/person.svg" alt=""> Profile</a>
-                <a href="/compose" class="newchirp">Chirp</a>
+                <a href="/compose" class="newchirp">post</a>
             </nav>
             <div id="menuSettings">
                 <a href="settings">⚙️ Settings</a>
@@ -79,10 +79,10 @@ session_start();
                     <textarea maxlength="240" placeholder="Find a message..."></textarea>
                 </div>
                 <div id="exploreChirp">
-                    <button type="submit" class="postChirp">Search</button>
+                    <button type="submit" class="postChirp">search</button>
                 </div>
             </form>
-            <p class="noMoreChirps">Seems like you don't have any messages!<br>Why don't you go interact with someone?
+            <p class="noMoreChirps">lol, no messages here.<br>maybe start a new chat?
             </p>
         </div>
         </div>
