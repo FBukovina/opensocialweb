@@ -7,19 +7,20 @@ replacement for X you've been waiting for.
 ## Status
 
 ### What's working
+# nothing right now, lol
 - [x] account creation
-- [x] posting(theeting)
+- [x] posting
 - [x] replying
 - [x] liking
 - [x] account editing
 - [x] drafts
 
 ### What isn't working
-- [ ] Reposts(retheets)
-- [ ] Viewing likes and reposts on accounts
+- [ ] reposts
+- [ ] viewing likes and reposts on accounts
 
 ### What's planned
-- [ ] Post editing
+- [ ] Post editing(needs + subscription)
 - [ ] Post deletion
 - [ ] Following
 - [ ] Search
