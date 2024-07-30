@@ -7,7 +7,7 @@ replacement for X you've been waiting for.
 ## Status
 
 ### What's working
-# nothing right now, lol
+#### nothing right now, lol
 - [x] account creation
 - [x] posting
 - [x] replying
